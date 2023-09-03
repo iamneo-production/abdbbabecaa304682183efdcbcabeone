@@ -10,6 +10,7 @@ body {
   }
   
 /* Enter your styling here */
+
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -19,11 +20,14 @@ body {
 }
 .container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 35px auto; /* Added margin for spacing */
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
+  display: flex; /* Added */
+  flex-direction: column; /* Added */
+  align-items: center; /* Added */
 }
 .header {
   color: #fff;
@@ -64,7 +68,62 @@ body {
   border-radius: 5px;
   font-size: 18px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 #reset-button:hover {
-  background-color: #0056b3;
+  background-color: #fff; /* Bright white background on hover */
+  color: #000; /* Black text color on hover */
+}
+/* Row Styling */
+.board > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Button Styling */
+.bt {
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333; /* Darker text color */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Lighter text shadow */
+  transition: background-color 0.3s ease-in-out;
+}
+.bt:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighter background color on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+/* Disabled Button Styling */
+.bt[disabled] {
+  background-color: rgba(0, 0, 0, 0.1); /* Light gray background for disabled button */
+  color: #000; /* Black text color for disabled button */
+  cursor: not-allowed; /* No-drop cursor for disabled button */
+}
+/* Result Container Styling */
+.result-container {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+  border: 1px solid #ddd; /* Border around the result text */
+  border-radius: 5px;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+/* Result Styling */
+.result {
+  color: #fff; /* Bright white color */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Light text shadow */
+  font-size: 25px;
+}
+/* Reset Styling */
+#reset-button-container {
+  text-align: center; /* Center the reset section */
+  margin-top: 20px;
 }
